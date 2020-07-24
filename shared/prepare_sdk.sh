@@ -6,4 +6,4 @@ if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
   exit 1
 fi
 
-. /shared/sdk/romulus-delta/environment-setup-arm1176jzs-openbmc-linux-gnueabi
+. /shared/sdk/romulus-sdk/environment-setup-arm1176jzs-openbmc-linux-gnueabi
