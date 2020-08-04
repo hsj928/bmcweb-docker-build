@@ -1,8 +1,10 @@
-from ubuntu:20.04
+FROM ubuntu:20.04
+
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
 && ln -fs /usr/share/zoneinfo/Europe/Berlin /etc/localtime \
-&& DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata \
+&& apt-get install -y tzdata \
 && dpkg-reconfigure --frontend noninteractive tzdata \
 && apt-get install -y qemu-system-arm \
 && apt-get install -y git build-essential libsdl1.2-dev texinfo gawk chrpath diffstat \
